@@ -17,14 +17,15 @@ historial = modelo.fit(celsius, fahrenheit, epochs=1000, verbose=False)
 print("Modelo Entrenado!")
 
 import matplotlib.pyplot as plt
+#grafica
 plt.xlabel("# Epoca")
 plt.ylabel("Magnitud de Perdida")
 plt.plot(historial.history["loss"])
 plt.show()
-
+#prediccion
 print("Hagamos una prueba de prediccion")
 resultado = modelo.predict([100.0])
 print("El resultado es " + str(resultado) + " fahrenheit")
-
+#ver los valores asignados
 print("Variables internas del modelo")
 print(capa.get_weights())
